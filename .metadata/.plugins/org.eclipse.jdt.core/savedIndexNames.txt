@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/home/kali/Documentos/workspace-sts-4/.metadata/.plugins/org.eclipse.jdt.core
+2232327012.index
+3798276350.index

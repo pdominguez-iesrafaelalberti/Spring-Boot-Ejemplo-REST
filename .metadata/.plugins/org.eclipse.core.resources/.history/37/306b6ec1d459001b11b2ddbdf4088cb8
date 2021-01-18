@@ -1,0 +1,18 @@
+package com.dwes.restexample.controllers;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dwes.restexample.entities.Product;
+import com.dwes.restexample.repos.ProductRepository;
+
+@RestController
+public class ProductRestController {
+	
+	ProductRepository repository;
+	
+	public List<Product> getProducts(){
+		
+	}
+}

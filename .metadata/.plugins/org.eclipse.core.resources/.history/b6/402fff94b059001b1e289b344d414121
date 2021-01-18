@@ -1,0 +1,8 @@
+package com.dwes.rest;
+
+import java.util.concurrent.atomic.AtomicLong;
+
+@RestController
+public class RestController {
+
+}

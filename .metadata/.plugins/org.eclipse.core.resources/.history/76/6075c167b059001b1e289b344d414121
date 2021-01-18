@@ -1,0 +1,6 @@
+package com.dwes.rest;
+
+@RestController
+public class RestController {
+
+}
