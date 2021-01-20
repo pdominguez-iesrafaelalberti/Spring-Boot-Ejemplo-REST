@@ -44,6 +44,29 @@ public class ProductRestController {
 	public Product updateProduct(@RequestBody Product product) {
 		return repository.save(product);
 	}
+	
+	@RequestMapping(value = "/products/{id}", method = RequestMethod.PATCH)
+	public Product updatePatchProduct(@RequestBody Product product, @PathVariable("id") int id) {
+		
+		System.out.println("ID: " + id);
+		Product oldProduct = repository.findById(id).get();
+		
+		product.setId(oldProduct.getId());
+
+		if(product.getDescription() == null) {
+			product.setDescription(oldProduct.getDescription());
+		}
+		
+		if(product.getName() == null) {
+			product.setName(oldProduct.getName());
+		}
+		
+		if(product.getPrice() == null) {
+			product.setName(oldProduct.getName());
+		}
+		
+		return repository.save(product);
+	}
 
 	@RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
 	public void deleteProduct(@PathVariable("id") int id) {
@@ -51,5 +74,8 @@ public class ProductRestController {
 	}
 
 }
+	
+
+
 	
 
